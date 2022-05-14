@@ -22,7 +22,7 @@ func Printparams() {
 	str := os.Args
 	count := slicecount(str)
 
-	for i := 0; i < count; i++ {
+	for i := 1; i < count; i++ {
 		printstr(str[i])
 		ft.PrintRune('\n')
 	}

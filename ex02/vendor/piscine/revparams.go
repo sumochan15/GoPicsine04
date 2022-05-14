@@ -18,7 +18,7 @@ func printstr(str string) {
 	}
 }
 
-func RevParams() z{
+func RevParams() {
 	args := os.Args
 	count := countslice(args)
 	for count > 1 {
