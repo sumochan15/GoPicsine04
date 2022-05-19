@@ -19,21 +19,24 @@ func checkascii(str []string)([]string){
 			}
 		}
 	}
-	return str[1:]
+	return str
 }
 
 func printstr(str string){
 	for _, r := range str{
 		ft.PrintRune(r)
-		ft.PrintRune('\n')
-	}	
+	}
+	ft.PrintRune('\n')
 }
 
 func SortParams(){
 	str := os.Args
-	re_str := checkascii(str)
-	count := counteleme(re_str)
-	for i := 0; i < count; i++ {
-		printstr(re_str[i])
+	count := counteleme(str)
+	if count <= 1 {
+		return
+	}
+	re_str := checkascii(str[1:])
+	for _, v := range re_str{
+		printstr(v)
 	}
 }
